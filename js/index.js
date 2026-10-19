@@ -1,4 +1,4 @@
-import { CreateMLCEngine } from "@mlc-ai/web-llm";
+import { CreateMLCEngine } from "../@mlc-ai/web-llm";
 
 const output = document.querySelector("#output");
 const button = document.querySelector("#send");
