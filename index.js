@@ -8,10 +8,6 @@ const promptBox = document.querySelector("#prompt");
 const modelId = "Llama-3.2-1B-Instruct-q4f32_1-MLC";
 
 output.textContent = "Loading model…";
-if (!navigator.gpu) {
-  document.querySelector("#output").textContent =
-    "This browser/device does not support WebGPU.";
-};
 
 const engine = await CreateMLCEngine(modelId, {
   initProgressCallback: (progress) => {

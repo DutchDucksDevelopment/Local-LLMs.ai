@@ -5,5 +5,10 @@ body {
 
 #prompt {
   background: #1A1A1A;
-  color: #1A1A1A;
+  color: #fff;
+}
+
+#send {
+  background: #1A1A1A;
+  color: #fff;
 }
