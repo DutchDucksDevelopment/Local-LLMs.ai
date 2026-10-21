@@ -1,4 +1,4 @@
-import { CreateMLCEngine } from "@mlc-ai/web-llm";
+import { CreateMLCEngine } from "https://dutchducksdevelopment.github.io/Local-LLMs.ai/node_modules/@mlc-ai/web-llm";
 
 const output = document.querySelector("#output");
 const button = document.querySelector("#send");
