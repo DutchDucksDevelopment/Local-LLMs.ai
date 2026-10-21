@@ -1,4 +1,6 @@
 import { CreateMLCEngine } from "@mlc-ai/web-llm";
+import DOMPurify from "dompurify";
+import { marked } from "marked";
 
 const modelId = "Llama-3.2-1B-Instruct-q4f32_1-MLC";
 const output = document.querySelector("#output");
@@ -31,7 +33,9 @@ try {
         messages: [{ role: "user", content: promptBox.value }],
       });
 
-      output.textContent = response.choices[0].message.content;
+      output.textContent = output.innerHTML = DOMPurify.sanitize(
+		marked.parse(response.choices[0].message.content)
+	);
     } catch (error) {
       output.textContent = `Error: ${error.message}`;
     } finally {
