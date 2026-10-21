@@ -1,5 +1,6 @@
 import { CreateMLCEngine } from "@mlc-ai/web-llm";
 
+const modelId = "Llama-3.2-1B-Instruct-q4f32_1-MLC";
 const output = document.querySelector("#output");
 const progressBar = document.querySelector("#model-progress");
 const button = document.querySelector("#send");
