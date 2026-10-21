@@ -1,36 +1,40 @@
-import { CreateMLCEngine } from "@mlc-ai/web-llm";
-
 const output = document.querySelector("#output");
+const progressBar = document.querySelector("#model-progress");
 const button = document.querySelector("#send");
 const promptBox = document.querySelector("#prompt");
 
-// Choose a model ID available in this WebLLM version.
-const modelId = "Llama-3.2-1B-Instruct-q4f32_1-MLC";
+button.disabled = true;
 
-output.textContent = "Loading model…";
+try {
+  const engine = await CreateMLCEngine(modelId, {
+    initProgressCallback: ({ progress, text }) => {
+      const percent = Math.round(progress * 100);
 
-const engine = await CreateMLCEngine(modelId, {
-  initProgressCallback: (progress) => {
-    output.textContent = progress.text;
-  },
-});
+      progressBar.value = percent;
+      output.textContent = `Loading model (~1GB)… ${percent}% — ${text}`;
+    },
+  });
 
-output.textContent = "Model ready.";
+  output.textContent = "Model ready.";
+  progressBar.value = 100;
+  button.disabled = false;
 
-button.addEventListener("click", async () => {
-  console.log("yuh")
-  button.disabled = true;
-  output.textContent = "Generating…";
+  button.addEventListener("click", async () => {
+    button.disabled = true;
+    output.textContent = "Generating…";
 
-  try {
-    const response = await engine.chat.completions.create({
-      messages: [{ role: "user", content: promptBox.value }],
-    });
+    try {
+      const response = await engine.chat.completions.create({
+        messages: [{ role: "user", content: promptBox.value }],
+      });
 
-    output.textContent = response.choices[0].message.content;
-  } catch (error) {
-    output.textContent = `Error: ${error.message}`;
-  } finally {
-    button.disabled = false;
-  }
-});
+      output.textContent = response.choices[0].message.content;
+    } catch (error) {
+      output.textContent = `Error: ${error.message}`;
+    } finally {
+      button.disabled = false;
+    }
+  });
+} catch (error) {
+  output.textContent = `Model failed to load: ${error.message}`;
+}
