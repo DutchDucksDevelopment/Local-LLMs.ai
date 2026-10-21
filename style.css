@@ -12,3 +12,8 @@ body {
   background: #1A1A1A;
   color: #fff;
 }
+
+#output {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere; /* also breaks long unspaced strings */
+}
