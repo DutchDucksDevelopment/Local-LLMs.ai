@@ -1,3 +1,5 @@
+import { CreateMLCEngine } from "@mlc-ai/web-llm";
+
 const output = document.querySelector("#output");
 const progressBar = document.querySelector("#model-progress");
 const button = document.querySelector("#send");
