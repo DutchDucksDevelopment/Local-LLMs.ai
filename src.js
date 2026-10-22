@@ -3,7 +3,7 @@ import DOMPurify from "dompurify";
 import { marked } from "marked";
 import { prebuiltAppConfig } from "@mlc-ai/web-llm";
 
-const modelId = "Llama-3.2-1B-Instruct-q4f32_1-MLC";
+let modelId = "Qwen3.5-0.8B-q4f16_1-MLC";
 const output = document.querySelector("#output");
 const outputtext = document.getElementById("outputtext")
 const progressBar = document.querySelector("#model-progress");
