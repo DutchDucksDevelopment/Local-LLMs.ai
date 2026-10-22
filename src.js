@@ -1,6 +1,7 @@
 import { CreateMLCEngine } from "@mlc-ai/web-llm";
 import DOMPurify from "dompurify";
 import { marked } from "marked";
+import { prebuiltAppConfig } from "@mlc-ai/web-llm";
 
 const modelId = "Llama-3.2-1B-Instruct-q4f32_1-MLC";
 const output = document.querySelector("#output");
@@ -10,6 +11,8 @@ const button = document.querySelector("#send");
 const promptBox = document.querySelector("#prompt");
 
 button.disabled = true;
+console.log(prebuiltAppConfig.model_list.map((model) => model.model_id));
+
 
 try {
   const engine = await CreateMLCEngine(modelId, {
