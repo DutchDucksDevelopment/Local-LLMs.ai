@@ -34,7 +34,7 @@ try {
         messages: [{ role: "user", content: promptBox.value }],
       });
 
-      replytext = output.innerHTML = DOMPurify.sanitize(
+      let replytext = output.innerHTML = DOMPurify.sanitize(
 		marked.parse(response.choices[0].message.content)
 	  );
 	  output.insertAdjacentHTML("beforeend", replytext);
