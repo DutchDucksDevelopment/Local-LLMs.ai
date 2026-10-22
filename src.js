@@ -28,6 +28,7 @@ try {
 
   button.addEventListener("click", async () => {
     button.disabled = true;
+    outputtext.style.display = "flex";
     outputtext.textContent = "Generating…";
 
     try {
@@ -39,7 +40,7 @@ try {
 		marked.parse(response.choices[0].message.content)
 	  );
 	  output.insertAdjacentHTML("beforeend", replytext);
-	  outputtext.textContent = " ";
+	  outputtext.style.display = "none";
     } catch (error) {
       output.textContent = `Error: ${error.message}`;
     } finally {
@@ -47,5 +48,6 @@ try {
     }
   });
 } catch (error) {
+  outputtext.style.display = "flex";
   output.textContent = `Model failed to load: ${error.message}`;
 }
