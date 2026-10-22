@@ -36,8 +36,8 @@ try {
 
       replytext = output.innerHTML = DOMPurify.sanitize(
 		marked.parse(response.choices[0].message.content)
+	  );
 	  output.insertAdjacentHTML("beforeend", replytext);
-	);
     } catch (error) {
       output.textContent = `Error: ${error.message}`;
     } finally {
