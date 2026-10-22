@@ -20,7 +20,7 @@ try {
       const percent = Math.round(progress * 100);
 
       progressBar.value = percent;
-      outputtext.textContent = `Loading model (~1GB)… ${percent}% — ${text}`;
+      outputtext.textContent = `Loading model Qwen3.5 0.8B (~1GB)… ${percent}% — ${text}`;
     },
   });
 
