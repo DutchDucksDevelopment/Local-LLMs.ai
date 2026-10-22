@@ -23,6 +23,7 @@ try {
 
   outputtext.textContent = "Model ready.";
   progressBar.value = 100;
+  progressBar.remove();
   button.disabled = false;
 
   button.addEventListener("click", async () => {
@@ -38,6 +39,7 @@ try {
 		marked.parse(response.choices[0].message.content)
 	  );
 	  output.insertAdjacentHTML("beforeend", replytext);
+	  outputtext.textContent = "";
     } catch (error) {
       output.textContent = `Error: ${error.message}`;
     } finally {
