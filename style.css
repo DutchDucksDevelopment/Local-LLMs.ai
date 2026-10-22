@@ -13,7 +13,3 @@ body {
   color: #fff;
 }
 
-#output {
-  white-space: pre-wrap;
-  overflow-wrap: anywhere; /* also breaks long unspaced strings */
-}
