@@ -39,7 +39,7 @@ try {
 		marked.parse(response.choices[0].message.content)
 	  );
 	  output.insertAdjacentHTML("beforeend", replytext);
-	  outputtext.textContent = "";
+	  outputtext.textContent = " ";
     } catch (error) {
       output.textContent = `Error: ${error.message}`;
     } finally {
