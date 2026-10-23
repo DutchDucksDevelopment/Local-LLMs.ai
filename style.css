@@ -18,7 +18,6 @@ body {
 #send {
   margin-left: 5px;
   padding-bottom: 5.5px;
-  position: absolute;
   background: #1A1A1A;
   color: #fff;
   border: 0px;
@@ -50,4 +49,8 @@ body {
 
 #output {
   padding: 10px;
+}
+
+#outputtext {
+  overflow-wrap: anywhere;
 }
