@@ -7,6 +7,7 @@ body {
   justify-content: center; /* horizontal */
   align-items: center; 
   flex-direction: column;
+  font-family: Verdana, sans-serif;
 }
 
 #prompt {
