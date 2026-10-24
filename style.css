@@ -1,6 +1,6 @@
 body {
-  background: #000;
-  color: #fff;
+  background-image: url('./img/bg.png');
+  color: #000;
   min-height: 100vh;
   margin: 0;
   display: flex;
