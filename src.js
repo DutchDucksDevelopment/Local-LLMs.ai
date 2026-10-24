@@ -24,6 +24,7 @@ console.log(prebuiltAppConfig.model_list.map((model) => model.model_id));
 loadbutton.addEventListener("click", async () => {
 	localStorage.setItem("modelId", modeldropdown.value)
 	progressBar.style.display = "flex";
+	outputtext.style.display = "flex";
 	console.log(modeldropdown.value)
 	let modelId = modeldropdown.value;
 	console.log(modelId)
