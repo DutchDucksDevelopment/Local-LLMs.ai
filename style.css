@@ -10,6 +10,9 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+#outputtext {
+  color: #000
+
 #prompt {
   background: #1A1A1A;
   color: #fff;
