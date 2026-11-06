@@ -1,6 +1,6 @@
 body {
   background-image: url('./img/bg.png');
-  color: #000;
+  color: black;
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -11,8 +11,8 @@ body {
 }
 
 pre {
-  color: white
-
+  color: white;
+}
 #prompt {
   background: #1A1A1A;
   color: #fff;
