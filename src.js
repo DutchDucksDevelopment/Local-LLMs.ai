@@ -17,6 +17,7 @@ if (localStorage.getItem("modelId")) {
 	modeldropdown.value = localStorage.getItem("modelId")
 }
 
+outputtext.style.color = "white"
 
 button.disabled = true;
 console.log(prebuiltAppConfig.model_list.map((model) => model.model_id));
