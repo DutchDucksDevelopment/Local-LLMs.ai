@@ -50,6 +50,7 @@ loadbutton.addEventListener("click", async () => {
 		button.addEventListener("click", async () => {
 			button.disabled = true;
 			outputtext.style.display = "flex";
+			outputtext.style.color = "white"
 			outputtext.textContent = "Generating…";
 
 			try {
@@ -62,6 +63,7 @@ loadbutton.addEventListener("click", async () => {
 			);
 			output.insertAdjacentHTML("beforeend", replytext);
 			outputtext.style.display = "none";
+			outputtext.style.color = "white"
 			} catch (error) {
 				outputtext.textContent = `Error: ${error.message}`;
 			} finally {
