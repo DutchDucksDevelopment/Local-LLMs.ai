@@ -10,7 +10,7 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-#outputtext {
+pre {
   color: white
 
 #prompt {
