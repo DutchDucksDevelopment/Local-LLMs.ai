@@ -75,4 +75,4 @@ loadbutton.addEventListener("click", async () => {
 		output.textContent = `Model failed to load: ${error.message}`;
 	}
 })
-outputtext.style.color = "white"
+outputtext.style.color = "#fff"
