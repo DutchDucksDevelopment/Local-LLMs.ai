@@ -18,6 +18,7 @@ if (localStorage.getItem("modelId")) {
 }
 
 outputtext.style.color = "white"
+console.log("debug")
 
 button.disabled = true;
 console.log(prebuiltAppConfig.model_list.map((model) => model.model_id));
